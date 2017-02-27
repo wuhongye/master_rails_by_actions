@@ -836,3 +836,105 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-27 18:08:14 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_menu.html.erb (0.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:33: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <%= link_to "退出", logout_p...
+...                               ^
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:51: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/_menu.html.erb:33: syntax error, unexpected '<'
+app/views/layouts/_menu.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/_menu.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/_menu.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2048371797573198588_69907741068160'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+Started GET "/" for 127.0.0.1 at 2017-02-27 18:08:51 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:33: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <%= link_to "退出", logout_p...
+...                               ^
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:51: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/_menu.html.erb:33: syntax error, unexpected '<'
+app/views/layouts/_menu.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/_menu.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/_menu.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2048371797573198588_69907995751560'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.7ms)
+Started GET "/" for 127.0.0.1 at 2017-02-27 18:08:52 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_menu.html.erb (1.4ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:33: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <%= link_to "退出", logout_p...
+...                               ^
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+/home/code/master_rails_by_actions/app/views/layouts/_menu.html.erb:51: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/_menu.html.erb:33: syntax error, unexpected '<'
+app/views/layouts/_menu.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/_menu.html.erb:49: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/_menu.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2048371797573198588_69907786665840'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+Started GET "/" for 127.0.0.1 at 2017-02-27 18:09:08 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (24.3ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 1.8ms)
+
+
