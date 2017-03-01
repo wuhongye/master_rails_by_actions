@@ -2,8 +2,8 @@
   <h1><%= @category.new_record? ? "新建分类" : "修改分类 ##{params[:id]}" %></h1>
 </div>
 
-<div class="form-body">
-  <%= from_for @category,
+<div class="form-body" >
+  <%= form_for @category,
   url: (@category.new_record? ? admin_categories_path : admin_category_path(@category)),
   method: (@category.new_record? ? 'post' : 'put'),
   html: { class: 'form-horizontal' } do |f| %>
@@ -11,7 +11,7 @@
     <% unless @category.errors.blank? %>
       <div class="alert alert-danger">
         <ul class="list-unstyled">
-          <% @category.errors.message.values.flatten.each do |error| %>
+          <% @category.errors.messages.values.flatten.each do |error| %>
             <li><i class="fa fa-exclamation-circles"></i><%= error %></li>
           <% end -%>
         </ul>

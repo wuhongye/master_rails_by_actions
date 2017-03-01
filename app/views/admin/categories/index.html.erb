@@ -4,7 +4,11 @@
   </div>
 
   <h1>
-    分类(<%= @categories.total_entries %>)
+    <% if @category %>
+      分类:<%= @category.title %>(<%= @categories.total_entries %>) 
+    <% else -%>
+      分类(<%= @categories.total_entries %>)
+    <% end -%> 
   </h1>
 </div>
 
