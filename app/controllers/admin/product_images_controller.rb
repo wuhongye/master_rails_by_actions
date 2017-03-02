@@ -12,14 +12,14 @@ class Admin::ProductImagesController < Admin::BaseController
     end
 
     redirect_to :back
-  end
+end
 
   def destroy
     @product_image = @product.product_images.find(params[:id])
     if @product_image.destroy
       flash[:notice] = "删除成功"
     else
-      flash[notice] = "删除失败"
+      flash[:notice] = "删除失败"
     end
       redirect_to :back
   end
