@@ -18,8 +18,10 @@ class Admin::ProductImagesController < Admin::BaseController
     @product_image = @product.product_images.find(params[:id])
     if @product_image.destroy
       flash[:notice] = "删除成功"
-      redirect_to :back
+    else
+      flash[notice] = "删除失败"
     end
+      redirect_to :back
   end
 
   private

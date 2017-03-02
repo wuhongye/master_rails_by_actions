@@ -4821,3 +4821,71 @@ Processing by Admin::ProductsController#index as HTML
 Completed 200 OK in 44ms (Views: 34.8ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-02 17:54:00 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (8.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 1585ms (Views: 1580.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-02 17:54:03 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/code/master_rails_by_actions/app/models/product_image.rb:7: syntax error, unexpected tIDENTIFIER, expecting '}'
+    middle: '200^x200'
+          ^
+/home/code/master_rails_by_actions/app/models/product_image.rb:8: syntax error, unexpected ':', expecting keyword_end
+    big: '960x'
+        ^
+/home/code/master_rails_by_actions/app/models/product_image.rb:9: syntax error, unexpected '}', expecting keyword_end):
+  
+app/models/product_image.rb:7: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/models/product_image.rb:8: syntax error, unexpected ':', expecting keyword_end
+app/models/product_image.rb:9: syntax error, unexpected '}', expecting keyword_end
+app/controllers/admin/product_images_controller.rb:6:in `index'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-02 17:54:59 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 25.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-02 17:56:48 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TPRhf/RV7rLUTynNaQbbSBIYFu1cjRtDJBU/tmbN9lmtJWIZcszKrhJExQBlgfddPcrTO2O8Nz+VYgf/CykDvQ==", "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/admin/product_images_controller.rb:10:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
