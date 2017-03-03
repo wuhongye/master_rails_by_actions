@@ -6648,3 +6648,350 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-03 12:02:15 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (0 for 1..2)):
+  
+app/models/category.rb:15:in `[]'
+app/models/category.rb:15:in `block in grouped_data'
+app/models/category.rb:13:in `inject'
+app/models/category.rb:13:in `grouped_data'
+app/controllers/welcome_controller.rb:4:in `index'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:17:12 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.9ms)
+
+
+  
+ArgumentError (wrong number of arguments (0 for 1..2)):
+  
+app/models/category.rb:15:in `[]'
+app/models/category.rb:15:in `block in grouped_data'
+app/models/category.rb:13:in `inject'
+app/models/category.rb:13:in `grouped_data'
+app/controllers/welcome_controller.rb:4:in `index'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:18:42 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (2.8ms)
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (5.7ms)
+  Rendered welcome/index.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (106.7ms)
+Completed 200 OK in 372ms (Views: 328.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/categories/16" for 127.0.0.1 at 2017-03-03 16:18:47 +0800
+  
+ActionController::RoutingError (uninitialized constant CategoriesController):
+  
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/code/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/home/code/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/home/code/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (18.6ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.4ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.1ms)
+Started GET "/categories/16" for 127.0.0.1 at 2017-03-03 16:33:05 +0800
+  
+ActionController::RoutingError (uninitialized constant CategoriesController):
+  
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/code/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/home/code/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/home/code/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered collection of /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (31.8ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:23 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (2.6ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (3.3ms)
+Completed 200 OK in 3651ms (Views: 3639.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:27 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (2.6ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (5.0ms)
+  Rendered welcome/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (1.9ms)
+Completed 200 OK in 106ms (Views: 101.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:28 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (2.1ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.8ms)
+  Rendered welcome/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (1.6ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:28 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (3.1ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.0ms)
+  Rendered welcome/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (2.1ms)
+Completed 200 OK in 58ms (Views: 50.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:28 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (3.4ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.9ms)
+  Rendered welcome/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (1.6ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:29 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (10.5ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:30 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (3.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (5.8ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (6.1ms)
+  Rendered welcome/index.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (1.6ms)
+Completed 200 OK in 51ms (Views: 43.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:33:30 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (2.1ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (1.5ms)
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (1.5ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 16:35:00 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (5.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (9.4ms)
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.8ms)
+  Rendered welcome/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (2.2ms)
+Completed 200 OK in 67ms (Views: 56.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 16:37:08 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/16" for 127.0.0.1 at 2017-03-03 16:52:38 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 16 LIMIT 1[0m
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (4.8ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 9 LIMIT 1[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 16 AND `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (1.4ms)
+  Rendered categories/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (16.3ms)
+Completed 200 OK in 99ms (Views: 48.2ms | ActiveRecord: 2.9ms)
+
+
