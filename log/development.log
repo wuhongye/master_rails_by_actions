@@ -5275,3 +5275,1376 @@ Processing by Admin::ProductImagesController#index as HTML
 Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.7ms)
 
 
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 09:16:34 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J1M6oJTVEL8Qw41QfDQvaXJcsbzZIBBI7Jdxui5pvB7GgjnGEkw0o9bIYZ1wswN8XY50auYRPDRd4EnzQ41J+g==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x00000005ff4948 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-2116-13zmhx2.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-2116-nai350.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-2116-69jo4c.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 98ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 09:16:35 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (15.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 2089ms (Views: 2085.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:06:35 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sBA7/sKm6zpja2eBfyrK71v9bhKR44KIaCAnTVb510XEUOJfZO/sC+GQVMJe4c+kr0wbnV2onaQ17jUWL8SuQ==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f5f36e0e0d8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-2116-8mgof.jpg>, @original_filename="u=3878905916,3743720292&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=3878905916,3743720292&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-1dphs59.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-tn2rwg.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 17ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:06:35 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.1ms)
+  Rendered admin/layouts/_menu.html.erb (1.1ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:06:40 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (2.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 94.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 10:06:43 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 10:06:44 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.3ms)
+  Rendered admin/layouts/_menu.html.erb (1.3ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-03 10:06:44 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (12.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 28.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 10:06:45 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (5.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:06:47 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (2.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:15:54 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nzns64S5YULaK+d1P3n18IuWetg3JwXh0o7C7bgezEvW6O+NAiBFXhwgC7gz/tnlpES/DggWKZ1j+fqk1fo5rw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f5f3730a960 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-2116-1sznxv.jpg>, @original_filename="u=3878905916,3743720292&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=3878905916,3743720292&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-12q7m37.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-1xrwfzf.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 30ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:15:54 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.6ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (4.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:16:05 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (3.8ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (8.6ms)
+  Rendered admin/layouts/_menu.html.erb (4.8ms)
+Completed 200 OK in 80ms (Views: 67.7ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:16:12 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8EnIxjStIr5LfzYY5+CYSKIFOJFTA3dxLhLf6ORnpucRmMugsjQGoo102tXrZ7Rdjdf9R2wyWw2fZeehiYNTAw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f5f1debc0c0 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-2116-1wvc51r.jpg>, @original_filename="u=3878905916,3743720292&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=3878905916,3743720292&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-c12144.jpg'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-104sv2r.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 17ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:16:12 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (1.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:16:35 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vngo6DhOVB3QqoqgbK6fRF/kWhOYqOJHRS1ib+AwaVVfqSuOvtdwARahZm1gKbNRcDafxaeZzjv0WlomjdScsQ==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f5f1c12ca78 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-2116-bquxn0.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-2116-19l44zk.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-2116-1iuw0it.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 43ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:16:35 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.7ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:18:20 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tEIELDSrCYu9nflNqCZu1ZT2reJih7wmiL3B7KThwi5VkwdKsjItl3uWFYCkoULAuyRoNF22kFo5yvmlyQU3yg==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f5f37ebc2b8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-2116-nbtevi.jpg>, @original_filename="u=3878905916,3743720292&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=3878905916,3743720292&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-4xv6md.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-2116-1k9o1mg.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for Admin::ProductImagesController#create, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:18:26 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (5.2ms)
+  Rendered admin/layouts/_menu.html.erb (1.4ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:19:03 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (4.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 25.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 10:19:35 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_menu.html.erb (3.5ms)
+Completed 200 OK in 303ms (Views: 302.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 10:19:40 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 10:19:42 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (23.9ms)
+  Rendered admin/layouts/_menu.html.erb (2.0ms)
+Completed 200 OK in 80ms (Views: 56.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:19:43 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (4.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 30.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:19:55 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hW3pSaJM6ZCH+TdSWT+9mo3VOsZICSp5vDK1Ouw3Zd5kvOovJNXNjEHy259VuJGPogf/EHc4BgUNRY1zgdOQOg==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x00000003cd66c8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4001-1dzdlvq.jpeg>, @original_filename="timg.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"timg.jpeg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/77ed36f4b18679ce54d4cebda306117e20170303-4001-1hic1r6.jpeg'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/77ed36f4b18679ce54d4cebda306117e20170303-4001-1nxd4ru.jpeg'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 76ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:19:55 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:20:09 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (5.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:25:28 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XtGL6/spLGUJipRkxIgDelUqionKXEQQcuXNIqgngc+/AIiNfbAIec+BeKnIDy9vevhPX/VtaGzDkvVrxcN0Kw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f2565627370 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4001-1ra6h4q.jpeg>, @original_filename="timg.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"timg.jpeg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `beybug' for #<Admin::ProductImagesController:0x007f25655b1df0>):
+  
+app/controllers/admin/product_images_controller.rb:10:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:26:02 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XtGL6/spLGUJipRkxIgDelUqionKXEQQcuXNIqgngc+/AIiNfbAIec+BeKnIDy9vevhPX/VtaGzDkvVrxcN0Kw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f256627b6f8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4001-bn3l13.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4001-1ih38u8.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4001-18k73di.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:15)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 20140ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:26:22 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (5.0ms)
+  Rendered admin/layouts/_menu.html.erb (1.6ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:26:44 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x0000000447f028 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4326-kzz721.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4326-1guc10f.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4326-x8hfvr.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 3511ms (ActiveRecord: 3.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.0ms)
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images`[0m
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:29:23 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007ff03cb0bbc8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4326-1fr369y.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4326-1yjix7z.jpg'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4326-1xdng8r.jpg'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images`[0m
+Completed 500 Internal Server Error in 79853ms (ActiveRecord: 7.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.8ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:31:47 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x00000005067c50 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4610-1cafam1.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-11rv8yu.jpg'
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-gz25si.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-2df9xg.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-kvy5pe.jpg'
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-7l6gpw.jpg'
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-1j3y54n.jpg'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-l5dgz6.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-17zd3t5.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-c72je9.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-m1rvvh.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 499536ms (ActiveRecord: 4.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.4ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:40:13 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x00000005239240 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4610-13o56k.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-1ltg43q.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-4610-xhi9in.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 3323ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.8ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:40:23 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f0f85988fc8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-4610-1j74dmr.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-4610-ujbhte.png'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-4610-1sd41bi.png'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-4610-dp7vop.png'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-4610-162zmph.png'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 145126ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.4ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:43:07 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x0000000548adf0 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-5068-1ieofjd.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Completed 500 Internal Server Error in 36979ms (ActiveRecord: 4.1ms)
+
+
+  
+Paperclip::Errors::MissingRequiredValidatorError (Paperclip::Errors::MissingRequiredValidatorError):
+  
+app/controllers/admin/product_images_controller.rb:12:in `block in create'
+app/controllers/admin/product_images_controller.rb:10:in `each'
+app/controllers/admin/product_images_controller.rb:10:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.7ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:43:57 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRB2JsSEYRLWS5gUbrCT5Q7fBGgLzWhGqrKUpXABoLeAwXVAQh1FDhBAdNliN7/wIQ3BvjT8RDobxazsHeVVUw==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x000000055ac1e8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-5122-1mel1w0.jpg>, @original_filename="u=3878905916,3743720292&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=3878905916,3743720292&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-5122-ruuha4.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-5122-1j40qua.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-5122-25ju6k.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-5122-7x468g.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 654782ms (ActiveRecord: 3.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-03 10:59:13 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_menu.html.erb (3.5ms)
+Completed 200 OK in 273ms (Views: 272.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-03-03 10:59:19 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-03-03 10:59:29 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uN+VtIUikAmWedZoE9jKQP0lsYrORgJlfrRg3KI2UTlZDpbSA7u0FVByOqUfX+ZV0vd0XPF3LhnPw1iVz9Kk3Q==", "email"=>"aaa@qq.com", "password"=>"[FILTERED]", "sign_submit"=>"登录"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'aaa@qq.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 347ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-03-03 10:59:29 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-03-03 10:59:37 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5xqcQHUGjCCCKReZP7qil5R+EiqG5PdShEestXB6TRAGy58m85+oPEQi+1QzPY6Cu6zX/LnV2y41MJT8HZ649A==", "email"=>"aaa@qq.com", "password"=>"[FILTERED]", "sign_submit"=>"登录"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'aaa@qq.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 10:59:37 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (7.7ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 10:59:45 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.9ms)
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 10:59:47 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (26.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 61.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:59:49 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.5ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (6.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 78ms (Views: 39.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 10:59:53 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JGHRiX1Q/10UmHpGRh9p/5bQfXLVjpPcNGxJp46cHkdQIQgo2xn4bJZjSQVn1Gy0YmEI/RnFjPBpolv896FnQ==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007fc0751b17b8 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-5701-1738v1v.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-5701-1d7d3n4.png'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-5701-hm0g0v.png'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-5701-bn99jo.png'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+Processing by Admin::ProductsController#index as HTML
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-5701-1obs5sf.png'
+Started GET "/" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+Processing by Admin::ProductsController#index as HTML
+Processing by WelcomeController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (9.6ms)[0m  [1m[35mBEGIN[0m
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+Started GET "/" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+Started GET "/" for 127.0.0.1 at 2017-03-03 11:05:01 +0800
+Processing by Admin::SessionsController#new as HTML
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[35m (10.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  Rendering welcome/index.html.erb within layouts/application
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.5ms)
+  Rendered admin/products/index.html.erb within admin/layouts/admin (23.0ms)
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-5701-18rr538.png'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+  Rendered admin/products/index.html.erb within admin/layouts/admin (91.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendered admin/layouts/_menu.html.erb (0.2ms)
+  Rendered layouts/_menu.html.erb (28.7ms)
+Completed 500 Internal Server Error in 307474ms (ActiveRecord: 14.8ms)
+
+
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+Completed 200 OK in 153ms (Views: 142.8ms | ActiveRecord: 3.4ms)
+
+
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 218ms (Views: 197.8ms | ActiveRecord: 11.6ms)
+
+
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+Completed 200 OK in 203ms (Views: 196.0ms | ActiveRecord: 1.0ms)
+
+
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendering welcome/index.html.erb within layouts/application
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+     6:     maxiumum-scale=1.0, user-scalable=no">    
+     7:     <%= csrf_meta_tags %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    10:     <%= yield :styleseets %>
+    11:   </head>
+    12: 
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  
+  Rendered layouts/_menu.html.erb (5.8ms)
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2369529845610253627_70232525077580'
+  Rendered layouts/_menu.html.erb (17.6ms)
+Completed 200 OK in 174ms (Views: 158.8ms | ActiveRecord: 14.5ms)
+
+
+Completed 200 OK in 158ms (Views: 156.8ms | ActiveRecord: 0.7ms)
+
+
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.7ms)
+Started GET "/" for 127.0.0.1 at 2017-03-03 11:05:18 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (89.6ms)
+Completed 200 OK in 347ms (Views: 343.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 11:05:26 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.5ms)
+  Rendered admin/layouts/_menu.html.erb (1.1ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 11:05:28 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (17.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 66.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:05:29 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.7ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (7.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 28.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:05:33 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGdttXqqVXOVbIwnxuEXcAz5uJ3dMCDZP8Ar/SgD0S2xtm7T/DNxb1NnYOrKZjtlIyt9S+IBDKWOtxO0ReckyQ==", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8d08e67930 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-1k21c82.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/admin/product_images_controller.rb:10:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.2ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:05:52 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGdttXqqVXOVbIwnxuEXcAz5uJ3dMCDZP8Ar/SgD0S2xtm7T/DNxb1NnYOrKZjtlIyt9S+IBDKWOtxO0ReckyQ==", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8d0a1d1c00 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-1jnk0by.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-b084hv.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]' -auto-orient -resize "60^" '/tmp/adbf47a8bf64b19b3611901286b9a13e20170303-6105-18qbgzg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]' -auto-orient -resize "200^" '/tmp/adbf47a8bf64b19b3611901286b9a13e20170303-6105-1ja0q2g'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1acdqsd.png[0]' -auto-orient -resize "960" '/tmp/adbf47a8bf64b19b3611901286b9a13e20170303-6105-aqza65'
+Completed 500 Internal Server Error in 58657ms (ActiveRecord: 5.5ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/admin/product_images_controller.rb:11:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:07:17 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UGdttXqqVXOVbIwnxuEXcAz5uJ3dMCDZP8Ar/SgD0S2xtm7T/DNxb1NnYOrKZjtlIyt9S+IBDKWOtxO0ReckyQ==", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8d0b57fbd0 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-akc7ln.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"image\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/admin/product_images_controller.rb:10:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:07:20 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (5.6ms)
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 38ms (Views: 30.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:07:24 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MPiOT2zRhTRrn8iFESrUud3bnJcaO1zUeMBIRl5GzGjRKY0p6kihKK2UJEgdrfis8glZQSUKcKjJt3APM6I5jA==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x00000004b89120 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-1puyl1j.png>, @original_filename="20170303103944904.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"20170303103944904.png\"\r\nContent-Type: image/png\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1itypo1.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]' -auto-orient -resize "60^" '/tmp/516b1d7d37a6abeeffd9f44f28b14e6520170303-6105-1kfkfly'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]' -auto-orient -resize "200^" '/tmp/516b1d7d37a6abeeffd9f44f28b14e6520170303-6105-49cs08'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-p2tdsz.png[0]' -auto-orient -resize "960" '/tmp/516b1d7d37a6abeeffd9f44f28b14e6520170303-6105-1a00ztb'
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1y55egc.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]' -auto-orient -resize "60^" '/tmp/45e6b5236aad3b3e34b6465efa2ba28320170303-6105-1fytwia'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]' -auto-orient -resize "200^" '/tmp/45e6b5236aad3b3e34b6465efa2ba28320170303-6105-11cue10'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]'
+Command :: convert '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-lbmqdd.png[0]' -auto-orient -resize "960" '/tmp/45e6b5236aad3b3e34b6465efa2ba28320170303-6105-1yeejcn'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/52f36575f04dcbd83795c91ea5497ad920170303-6105-1lozjlx.png'
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `product_images` (`product_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`) VALUES (4, '20170303103944904.png', 'image/png', 118012, '2017-03-03 03:08:14', '2017-03-03 03:08:14', '2017-03-03 03:08:14')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 52051ms (ActiveRecord: 7.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (1 for 0)):
+  
+app/controllers/admin/product_images_controller.rb:15:in `create'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.4ms)
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images`[0m
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:08:52 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (10.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 27.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:08:56 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLdIXzrF7N+SxRIoHQx4RoYc1ohtrDI6jT57BP3qL7K1Zks5vFzIw1TO/uURi1RTqc4TXlKdHkY8SUNNkA7aVg==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f8d087e0ad0 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-f3k1s3.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-6105-th1mtm.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]'
+Command :: convert '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]' -auto-orient -resize "60^" '/tmp/fdce8f3f06bb04f05c31f9077530786620170303-6105-30nn7'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]'
+Command :: convert '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]' -auto-orient -resize "200^" '/tmp/fdce8f3f06bb04f05c31f9077530786620170303-6105-bunrkw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]'
+Command :: convert '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1bux1p8.jpg[0]' -auto-orient -resize "960" '/tmp/fdce8f3f06bb04f05c31f9077530786620170303-6105-gfzl1j'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-6105-1dkciji.jpg'
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `product_images` (`product_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`) VALUES (4, 'u_2002641048_1546554627_fm_23_gp_0.jpg', 'image/jpeg', 13465, '2017-03-03 03:08:56', '2017-03-03 03:08:57', '2017-03-03 03:08:57')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 170ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:08:57 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/admin/products/4/product_images/1" for 127.0.0.1 at 2017-03-03 11:08:59 +0800
+Processing by Admin::ProductImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"go3Es2mM2P5Ov70hXjOTlbTNo1ViuSaCiwhlKb3+5OJjXMfV7xX84oi0UexStL+Amx9mg12ICv46f11g0BoRBg==", "product_id"=>"4", "id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT  `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 AND `product_images`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `product_images` WHERE `product_images`.`id` = 1[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/001/original/20170303103944904.png
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/001/small/20170303103944904.png
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/001/middle/20170303103944904.png
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/001/big/20170303103944904.png
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from destroy at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:24)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 19ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:08:59 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:09:01 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.6ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (6.6ms)
+  Rendered admin/layouts/_menu.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 42.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:10:13 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (13.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 34.1ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:10:17 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JOUkpd8FBfzyxZKhMcpIBPBlPU4z6XxRRbv5XypzoT3FNCfDWZwh4DTOfmw9TWQR37f4mAzYUC30zMEWR5dU2Q==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f8ce03aaa10 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-o2ywr8.jpg>, @original_filename="u=3878905916,3743720292&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=3878905916,3743720292&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-6105-ryo3h8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]'
+Command :: convert '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]' -auto-orient -resize "60^" '/tmp/06e6e274cca32a34dd6ea368d262701220170303-6105-n772k1'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]'
+Command :: convert '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]' -auto-orient -resize "200^" '/tmp/06e6e274cca32a34dd6ea368d262701220170303-6105-m74mjc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]'
+Command :: convert '/tmp/315244f3a7c371432d36300468384da420170303-6105-bwjoan.jpg[0]' -auto-orient -resize "960" '/tmp/06e6e274cca32a34dd6ea368d262701220170303-6105-1xxzmck'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/3dadd38b07f8c6dbfb785b302392b98720170303-6105-1xohb8n.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `product_images` (`product_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`) VALUES (4, 'u_3878905916_3743720292_fm_23_gp_0.jpg', 'image/jpeg', 9434, '2017-03-03 03:10:17', '2017-03-03 03:10:17', '2017-03-03 03:10:17')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 121ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:10:17 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admin/products/4/product_images/2" for 127.0.0.1 at 2017-03-03 11:10:19 +0800
+Processing by Admin::ProductImagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WKNu0GK6ymwh3aIbrdkn/5GlLxtYLAN2q5Kg4j39GVy5cm225CPucOfWTtahXgvqvnfqzWcdLwoa5ZirUBnsuA==", "product_id"=>"4", "id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT  `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 AND `product_images`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `product_images` WHERE `product_images`.`id` = 2[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/002/original/u_2002641048_1546554627_fm_23_gp_0.jpg
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/002/small/u_2002641048_1546554627_fm_23_gp_0.jpg
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/002/middle/u_2002641048_1546554627_fm_23_gp_0.jpg
+[paperclip] deleting /home/code/master_rails_by_actions/public/system/product_images/images/000/000/002/big/u_2002641048_1546554627_fm_23_gp_0.jpg
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from destroy at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:24)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:10:19 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (3.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:12:30 +0800
+Processing by Admin::ProductImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WsrOTW+L9+hG93QJdpHQCPKCxG5lt7m6RU+Znk/T58K7G80r6RLT9ID8mMR6Fvwd3VABuFqGlcb0OKHXIjcSJg==", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f8ce03cecd0 @tempfile=#<Tempfile:/tmp/RackMultipart20170303-6105-f0uv8c.jpg>, @original_filename="u=2002641048,1546554627&fm=23&gp=0.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"u=2002641048,1546554627&fm=23&gp=0.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"上传", "product_id"=>"4"}
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-6105-x15arj.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]'
+Command :: convert '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]' -auto-orient -resize "60^" '/tmp/1a485b560d8f2971bc74ac6ded94a7b220170303-6105-8qgaj3'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]'
+Command :: convert '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]' -auto-orient -resize "200^" '/tmp/1a485b560d8f2971bc74ac6ded94a7b220170303-6105-a9tugo'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]'
+Command :: convert '/tmp/5c8f1f2d49b1bc61b6fd38fb7160a62a20170303-6105-1ilrdi5.jpg[0]' -auto-orient -resize "960" '/tmp/1a485b560d8f2971bc74ac6ded94a7b220170303-6105-j74xaj'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/tmp/7b45b1f4a2ad4f757da41f435fd0a08020170303-6105-z0bizz.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `product_images` (`product_id`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `created_at`, `updated_at`) VALUES (4, 'u_2002641048_1546554627_fm_23_gp_0.jpg', 'image/jpeg', 13465, '2017-03-03 03:12:30', '2017-03-03 03:12:30', '2017-03-03 03:12:30')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:14)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 161ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:12:30 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (4.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:37:18 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :destory):
+  
+app/models/product.rb:20:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/admin/product_images_controller.rb:40:in `find_product'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.5ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:38:01 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :destory):
+  
+app/models/product.rb:20:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/admin/product_images_controller.rb:40:in `find_product'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:38:03 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :destory):
+  
+app/models/product.rb:20:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/admin/product_images_controller.rb:40:in `find_product'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.1ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:38:41 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :destory):
+  
+app/models/product.rb:20:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/admin/product_images_controller.rb:40:in `find_product'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:41:38 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :destory):
+  
+app/models/product.rb:20:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/admin/product_images_controller.rb:40:in `find_product'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.1ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:41:45 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The :dependent option must be one of [:destroy, :delete_all, :nullify, :restrict_with_error, :restrict_with_exception], but is :destory):
+  
+app/models/product.rb:20:in `<class:Product>'
+app/models/product.rb:1:in `<top (required)>'
+app/controllers/admin/product_images_controller.rb:40:in `find_product'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:43:10 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 ORDER BY `product_images`.`weight` DESC[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (11.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/admin/products/4/product_images/3" for 127.0.0.1 at 2017-03-03 11:43:23 +0800
+Processing by Admin::ProductImagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R+zbEv+wsod0LoxZJrYku/g4fTk0NleNatBvoeLSDi2mPdh0eSmWm7IlYJQqMQiu1+q47wsHe/Hbp1fojzb7yQ==", "weight"=>"3", "commit"=>"更新", "product_id"=>"4", "id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT  `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 AND `product_images`.`id` = 3 ORDER BY `product_images`.`weight` DESC LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `weight=' for nil:NilClass):
+  
+app/controllers/admin/product_images_controller.rb:29:in `update'
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/code/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.2ms)
+Started PUT "/admin/products/4/product_images/3" for 127.0.0.1 at 2017-03-03 11:44:18 +0800
+Processing by Admin::ProductImagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R+zbEv+wsod0LoxZJrYku/g4fTk0NleNatBvoeLSDi2mPdh0eSmWm7IlYJQqMQiu1+q47wsHe/Hbp1fojzb7yQ==", "weight"=>"3", "commit"=>"更新", "product_id"=>"4", "id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT  `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 AND `product_images`.`id` = 3 ORDER BY `product_images`.`weight` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `product_images` SET `weight` = 3, `updated_at` = '2017-03-03 03:44:18' WHERE `product_images`.`id` = 3[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from update at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:32)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 46ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:44:18 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 ORDER BY `product_images`.`weight` DESC[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (5.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/admin/products/4/product_images/3" for 127.0.0.1 at 2017-03-03 11:44:20 +0800
+Processing by Admin::ProductImagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P8Qp9cNljsAHI06PCrytMP3EfvGuGc20xtjel7P31jPeFSqTRfyq3MEookIGO4El0ha7J5Eo4ch3r+be3hMj1w==", "weight"=>"3", "commit"=>"更新", "product_id"=>"4", "id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT  `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 AND `product_images`.`id` = 3 ORDER BY `product_images`.`weight` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from update at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:32)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:44:20 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 ORDER BY `product_images`.`weight` DESC[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (6.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/admin/products/4/product_images/4" for 127.0.0.1 at 2017-03-03 11:44:23 +0800
+Processing by Admin::ProductImagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gwz/hG4U4TPW0szYE7hQq7l2ktK06aBy1XaF1xOpy5xi3fzi6I3FLxDZIBUfP3y+lqRXBIvYjA5kAb2efk0+eA==", "weight"=>"5", "commit"=>"更新", "product_id"=>"4", "id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT  `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 AND `product_images`.`id` = 4 ORDER BY `product_images`.`weight` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `product_images` SET `weight` = 5, `updated_at` = '2017-03-03 03:44:23' WHERE `product_images`.`id` = 4[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from update at /home/code/master_rails_by_actions/app/controllers/admin/product_images_controller.rb:32)
+Redirected to http://localhost:3000/admin/products/4/product_images
+Completed 302 Found in 21ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/admin/products/4/product_images" for 127.0.0.1 at 2017-03-03 11:44:23 +0800
+Processing by Admin::ProductImagesController#index as HTML
+  Parameters: {"product_id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+  Rendering admin/product_images/index.html.erb within admin/layouts/admin
+  [1m[36mProductImage Load (0.5ms)[0m  [1m[34mSELECT `product_images`.* FROM `product_images` WHERE `product_images`.`product_id` = 4 ORDER BY `product_images`.`weight` DESC[0m
+  Rendered admin/product_images/index.html.erb within admin/layouts/admin (6.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2321506512563442330', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddProductImagesIndex (20170303034606)
+  [1m[35m (21.3ms)[0m  [1m[35mCREATE  INDEX `index_product_images_on_product_id_and_weight`  ON `product_images` (`product_id`, `weight`) [0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170303034606')[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2321506512563442330')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `categories`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'categories'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `product_images`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'product_images'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `products`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'products'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-03 11:47:57 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (9.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 27.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-03 11:47:58 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (10.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 11:47:59 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-03 11:48:00 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (7.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-03 11:48:00 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-03 11:49:04 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered layouts/_menu.html.erb (34.6ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 1.6ms)
+
+
