@@ -7708,3 +7708,32 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 89ms (Views: 79.7ms | ActiveRecord: 2.4ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2321506512563442330', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateOrders (20170308080505)
+  [1m[35m (37.0ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `product_id` int, `address_id` int, `order_no` varchar(255), `amount` int, `total_moeny` decimal(10,2), `payment_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_user_id`  ON `orders` (`user_id`) [0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_orders_on_order_no`  ON `orders` (`order_no`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170308080505')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('2321506512563442330')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `addresses`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'addresses'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `categories`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'categories'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `product_images`[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'product_images'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `products`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'products'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `shopping_carts`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'shopping_carts'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
