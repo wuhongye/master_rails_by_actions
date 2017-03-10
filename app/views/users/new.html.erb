@@ -62,7 +62,9 @@
           $('.cellphone-inner').removeClass('hide').find('input[type="text"]').prop('disabled', false);
           usingEmail = false;
         }else{
-          
+          $('.email-inner').removeClass('hide').find('input[type="text"]').prop('disabled', false);
+          $('.cellphone-inner').addClass('hide').find('input[type="text"]').prop('disabled', 1);
+          usingEmail = true;
         }
       });
     })
