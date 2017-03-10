@@ -7782,3 +7782,44 @@ Migrating to AddOrderPaymentIdColumn (20170309022208)
   [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'shopping_carts'[0m
   [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
   [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2321506512563442330', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddUsersCellphone (20170310033411)
+  [1m[35m (52.2ms)[0m  [1m[35mALTER TABLE `users` ADD `cellphone` varchar(255)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE  INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE  INDEX `index_users_on_cellphone`  ON `users` (`cellphone`) [0m
+  [1m[35m (51.8ms)[0m  [1m[35mALTER TABLE `users` CHANGE `email` `email` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170310033411')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVerifyTokens (20170310033451)
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE TABLE `verify_tokens` (`id` int AUTO_INCREMENT PRIMARY KEY, `token` varchar(255), `cellphone` varchar(255), `expired_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE  INDEX `index_verify_tokens_on_cellphone_and_token`  ON `verify_tokens` (`cellphone`, `token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170310033451')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2321506512563442330')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `addresses`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'addresses'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `categories`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'categories'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `payments`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'payments'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `product_images`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'product_images'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `products`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'products'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `shopping_carts`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'shopping_carts'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `verify_tokens`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'verify_tokens'[0m
