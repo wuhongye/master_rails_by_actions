@@ -31,6 +31,7 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def edit
+    # redirect_to admin_categories_path
     render action: :new
   end
 
@@ -52,6 +53,7 @@ class Admin::CategoriesController < Admin::BaseController
     else
       flash[:notice] = "删除失败"
       redirect_to :back
+      # redirect_to admin_categories_path
     end
   end
 

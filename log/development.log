@@ -7823,3 +7823,1551 @@ Migrating to CreateVerifyTokens (20170310033451)
   [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
   [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `verify_tokens`[0m
   [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'verify_tokens'[0m
+Started GET "/" for 127.0.0.1 at 2017-03-15 15:50:11 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (3.0ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (3.1ms)
+  Rendered welcome/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 3717ms (Views: 3665.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 15:50:20 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 132ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 15:56:16 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.5ms)
+  Rendered admin/layouts/_menu.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 15:56:18 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 15:56:19 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (8.0ms)
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 53.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 15:56:20 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (1.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 15:56:21 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 16:47:47 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 16:47:48 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (18.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 42.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 16:47:50 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 16:47:52 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.6ms)
+  Rendered admin/layouts/_menu.html.erb (3.8ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 16:49:24 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 16:49:44 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-15 17:18:49 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (2.8ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (3.3ms)
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 346ms (Views: 292.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 17:40:59 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-15 17:41:01 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 17:41:03 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 17:44:02 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 17:47:44 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.7ms)
+  Rendered admin/layouts/_menu.html.erb (1.6ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories?id=10" for 127.0.0.1 at 2017-03-15 17:49:10 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '10'[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (2.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 26.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:01:53 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (16.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/admin/categories/10" for 127.0.0.1 at 2017-03-15 18:02:01 +0800
+Processing by Admin::CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G8qhc/ZYB0rmr3FpspbPEAMmE2gvwC1Q/DSATLyy1rMDoZJ1bPJxxm3HjfLyO/sbjUV0uxCRV1Flx2I2PzBddQ==", "category"=>{"ancestry"=>"", "title"=>"游戏", "weight"=>"10"}, "commit"=>"编辑分类", "id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '游戏' AND (`categories`.`id` != 10) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `categories` SET `title` = '游戏', `updated_at` = '2017-03-15 10:02:01' WHERE `categories`.`id` = 10[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 26ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:02:01 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:02:52 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:02:52 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (7.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:02:54 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:02:54 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:02:55 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:02:55 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (7.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:02:55 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:02:55 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:03:13 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:03:13 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:03:53 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 39ms (Views: 23.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:04:37 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:04:37 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/10/edit" for 127.0.0.1 at 2017-03-15 18:04:39 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:04:39 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2017-03-15 18:05:24 +0800
+Processing by Admin::CategoriesController#new as HTML
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (6.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2017-03-15 18:05:50 +0800
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xc0w1o6Vv0+lrHm1v9gJ0UVqBHwvbtAISXTP6P+l8kVFpgPQFD/Jwy7EhS7/dT3aywljrxA/qgnQhy2SfCd5gw==", "category"=>{"ancestry"=>"", "title"=>"军事", "weight"=>"90"}, "commit"=>"新建分类"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '军事' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `weight`, `created_at`, `updated_at`) VALUES ('军事', 90, '2017-03-15 10:05:50', '2017-03-15 10:05:50')[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 19ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:05:50 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/17/edit" for 127.0.0.1 at 2017-03-15 18:06:03 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 17 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:06:03 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories/17/edit" for 127.0.0.1 at 2017-03-15 18:06:54 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 17 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-15 18:06:54 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories/17/edit" for 127.0.0.1 at 2017-03-15 18:07:10 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 17 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (4.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 22.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-16 09:18:56 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '17' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (3.4ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.8ms)
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 343ms (Views: 289.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-16 09:22:09 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.4ms)
+  Rendered admin/layouts/_menu.html.erb (1.2ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 09:22:11 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (10.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/admin/categories/17" for 127.0.0.1 at 2017-03-16 09:39:51 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uyCyeCh9NPPu6NE55Pe1PfqTX9JGRvXcyxR3RNTu3DoBNsOn6rfO1OE8nCDpJtc7KGsJE889WRCwS3o097dGcA==", "id"=>"17"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 17 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE (`categories`.`ancestry` LIKE '17/%' OR `categories`.`ancestry` = '17')[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`category_id` = 17[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `categories` WHERE `categories`.`id` = 17[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 54ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 09:39:51 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2017-03-16 09:43:05 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#new as HTML
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (11.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 30.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2017-03-16 09:43:21 +0800
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FgIleIhqYkfVwd90ZD4rzGlX7iHhvZWo66BvaQz7TAisFFSnSqCYYNoVkm1p70nKu6+44GjGOWSQ/2IZL6LWQg==", "category"=>{"ancestry"=>"", "title"=>"军事", "weight"=>"100"}, "commit"=>"新建分类"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '军事' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `weight`, `created_at`, `updated_at`) VALUES ('军事', 100, '2017-03-16 01:43:21', '2017-03-16 01:43:21')[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 24ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 09:43:21 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admin/categories/18" for 127.0.0.1 at 2017-03-16 09:43:25 +0800
+Processing by Admin::CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x8iMHifR0QTQc/hbYAgfPl69r7DDwejuloP78mMShfB93v3B5RsrI9+ntUJt2X04jEX5cUq6RCLt3PaCQEsfug==", "id"=>"18"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 18 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE (`categories`.`ancestry` LIKE '18/%' OR `categories`.`ancestry` = '18')[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`category_id` = 18[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `categories` WHERE `categories`.`id` = 18[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 31ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 09:43:25 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2017-03-16 10:13:17 +0800
+Processing by Admin::CategoriesController#new as HTML
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (5.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2017-03-16 10:13:43 +0800
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IrmE1AeCl4ex8j8g/7JP/UaM7DtyJElYBPRnENJaw5GYr/ULxUhtoL4mcjnyYy37lHS6+vtf5ZR/q2pg8QNZ2w==", "category"=>{"ancestry"=>"", "title"=>"特种部队", "weight"=>"100"}, "commit"=>"新建分类"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '特种部队' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `weight`, `created_at`, `updated_at`) VALUES ('特种部队', 100, '2017-03-16 02:13:43', '2017-03-16 02:13:43')[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 15ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:13:43 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admin/categories/19" for 127.0.0.1 at 2017-03-16 10:13:48 +0800
+Processing by Admin::CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+oqwtyab5Uk9RgXRgETfKKvJ1TqYgcOurth8rzjju+ZAnMFo5FEfbjKSSMiNlb0ueTGD+xH6b2LVh3HfG7ohrA==", "id"=>"19"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 19 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE (`categories`.`ancestry` LIKE '19/%' OR `categories`.`ancestry` = '19')[0m
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`category_id` = 19[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `categories` WHERE `categories`.`id` = 19[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 26ms (ActiveRecord: 16.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:13:48 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2017-03-16 10:14:27 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#new as HTML
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 19.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2017-03-16 10:14:41 +0800
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khH0dYNS5PE1wm3g5ltx6xL85OFmqSJtO9Zv2ljMWoAoB4WqQZge1joWIPnrihPtwASyIO/SjqFAiWKqe5XAyg==", "category"=>{"ancestry"=>"", "title"=>"军事特种部队", "weight"=>"100"}, "commit"=>"新建分类"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '军事特种部队' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `weight`, `created_at`, `updated_at`) VALUES ('军事特种部队', 100, '2017-03-16 02:14:41', '2017-03-16 02:14:41')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 14ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:14:41 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:40 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (8.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:41 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:42 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:42 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:42 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:42 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:42 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:43 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:43 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:43 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:43 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:47 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:47 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:47 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:47 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:48 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:48 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:48 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:48 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:48 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:49 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (10.1ms)
+  Rendered admin/layouts/_menu.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:49 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (11.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:49 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:49 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:49 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:49 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:50 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:50 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:50 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:34:50 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY id desc LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:35:57 +0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (7.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 28.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 10:35:58 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 10:54:31 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 38.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 11:34:02 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 11:34:17 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (2.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 11:36:57 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (2.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2017-03-16 11:57:58 +0800
+Processing by Admin::CategoriesController#new as HTML
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-16 15:34:44 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.4ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-03-16 15:34:45 +0800
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within admin/layouts/admin
+  Rendered admin/sessions/new.html.erb within admin/layouts/admin (0.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 15:34:45 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (6.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 15:34:50 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (2.7ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 16:37:51 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:3)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:CategoriesController> at /home/code/master_rails_by_actions/app/controllers/admin/categories_controller.rb:4)
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (8.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 274ms (Views: 252.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 16:38:02 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:38:08 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (11.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:37 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (8.0ms)
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:40 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (4.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:41 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:57 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (7.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:58 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (5.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:58 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.7ms)
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:58 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (4.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:58 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:59 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (4.4ms)
+  Rendered admin/layouts/_menu.html.erb (1.2ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:59 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:59 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (4.3ms)
+  Rendered admin/layouts/_menu.html.erb (1.3ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:46:59 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (2.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 16:47:00 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (16.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 49.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:37 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (9.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:37 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.3ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:37 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:37 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (6.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:38 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (4.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:38 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (7.8ms)
+  Rendered admin/layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/admin/categories/20" for 127.0.0.1 at 2017-03-16 17:26:40 +0800
+Processing by Admin::CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gzcfq3ArKnG48x/tBbpLIKDaroVkZ7C7y0Xftzqoyiw5IW50suHQVrcnUvQIaykmciL4RO0cHHewGtLHGfFQZg==", "category"=>{"ancestry"=>"", "title"=>"军事特种部队", "weight"=>"100"}, "commit"=>"编辑分类", "id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '军事特种部队' AND (`categories`.`id` != 20) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 17:26:40 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/categories/20/edit" for 127.0.0.1 at 2017-03-16 17:26:43 +0800
+Processing by Admin::CategoriesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (3.2ms)
+  Rendered admin/layouts/_menu.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/admin/categories/20" for 127.0.0.1 at 2017-03-16 17:27:08 +0800
+Processing by Admin::CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2S0tUU4RAouUUttmKhP67bonFYisw7UF2tVA8TS8cTtcsVqh/K+LSGFBnSVeS3tZBDKl6vIohhsNFhz54trjg==", "category"=>{"ancestry"=>"", "title"=>"军事特种部队(龙炎)", "weight"=>"100"}, "commit"=>"编辑分类", "id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '军事特种部队(龙炎)' AND (`categories`.`id` != 20) LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE `categories` SET `title` = '军事特种部队(龙炎)', `updated_at` = '2017-03-16 09:27:08' WHERE `categories`.`id` = 20[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 16ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 17:27:08 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 17:27:10 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (5.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2017-03-16 17:27:12 +0800
+Processing by Admin::CategoriesController#new as HTML
+  Rendering admin/categories/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC[0m
+  Rendered admin/categories/new.html.erb within admin/layouts/admin (2.8ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2017-03-16 17:27:23 +0800
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XE/TvQ6rb5n1Ekg0J3ATs+WzJbMV9JnoTAYQFjSx1ynmWaJizGGVvvrGBS0qoXG1N0tzcpyPNSQ3WR1mF+hNYw==", "category"=>{"ancestry"=>"20", "title"=>"战虎", "weight"=>"80"}, "commit"=>"新建分类"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `categories` WHERE `categories`.`title` = BINARY '战虎' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `categories` (`title`, `weight`, `created_at`, `updated_at`, `ancestry`) VALUES ('战虎', 80, '2017-03-16 09:27:23', '2017-03-16 09:27:23', '20')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 15ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2017-03-16 17:27:23 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (3.5ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/categories?id=20" for 127.0.0.1 at 2017-03-16 17:27:25 +0800
+Processing by Admin::CategoriesController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 20 LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within admin/layouts/admin
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY `categories`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/categories/index.html.erb within admin/layouts/admin (4.6ms)
+  Rendered admin/layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-16 17:29:08 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (22.1ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 65ms (Views: 45.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2017-03-16 17:29:14 +0800
+Processing by Admin::ProductsController#index as HTML
+  Rendering admin/products/index.html.erb within admin/layouts/admin
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` ORDER BY `products`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered admin/products/index.html.erb within admin/layouts/admin (6.0ms)
+  Rendered admin/layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/products/new" for 127.0.0.1 at 2017-03-16 17:33:51 +0800
+Processing by Admin::ProductsController#new as HTML
+  Rendering admin/products/new.html.erb within admin/layouts/admin
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9'[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10'[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20'[0m
+  Rendered admin/products/new.html.erb within admin/layouts/admin (6.9ms)
+  Rendered admin/layouts/_menu.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 23.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-17 11:26:08 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (3.5ms)
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (3.3ms)
+  Rendered welcome/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 471ms (Views: 298.2ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-17 11:26:13 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (6.0ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.0ms)
+  Rendered welcome/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_menu.html.erb (1.0ms)
+Completed 200 OK in 88ms (Views: 78.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-17 11:26:14 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (5.7ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (2.0ms)
+  Rendered welcome/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_menu.html.erb (1.2ms)
+Completed 200 OK in 98ms (Views: 89.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-03-17 11:26:41 +0800
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 36 LIMIT 1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_menu.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 63.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-17 11:39:25 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` IS NULL ORDER BY weight desc[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `shopping_carts` WHERE `shopping_carts`.`user_uuid` IS NULL[0m
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '20' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '9' ORDER BY weight desc[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`ancestry` = '10' ORDER BY weight desc[0m
+  Rendered shared/_categories.html.erb (5.6ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`status` = 'on' ORDER BY id desc LIMIT 12 OFFSET 0[0m
+  Rendered shared/_products.html.erb (1.6ms)
+  Rendered welcome/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 44.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-03-17 11:42:07 +0800
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_menu.html.erb (1.2ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.4ms)
+
+
